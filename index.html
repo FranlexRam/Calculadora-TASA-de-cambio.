@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css"/>
+  <title>Actividad 2</title>
+</head>
+<body>
+  <div>
+    <label for="">1 PEN es igual a:</label><br>
+    <input type="number" id="tasaBs" readonly>Bs<br>
+    <select>
+      <option>1%</option>
+      <option>5%</option>
+      <option>10%</option>
+      <option>25%</option>
+    </select>
+  </div>
+
+  <!-- Para recibir -->
+  <div class="titulo">
+    <h2>Cambio PEN.</h2>
+    <h2>Para recibir:</h2>
+  </div>
+  <div>
+    <label for="precio">Para recibir:</label>
+    <input id="precio" type="number" autofocus/>USDs
+    <label for="">Equivalen a:</label>
+    <input type="text" readonly> Bs.
+  </div>
+  <!-- <div>
+    <label for="descuento">La comimsion es de:</label>
+    <input id="descuento" readonly/>
+  </div> -->
+  <div>
+    <label for="total">Hay que enviar:</label>
+    <input id="total" readonly/>PEN (soles peruanos)
+  </div>
+
+<!-- Para enviar -->
+<div class="titulo">
+  <h2>Para enviar:</h2>
+</div>
+<div>
+  <label for="precio">Si se envian:</label>
+  <input id="precio" type="number" autofocus/>PEN (soles peruanos)
+</div>
+<!-- <div>
+  <label for="descuento">La comimsion es de:</label>
+  <input id="descuento" readonly/>
+</div> -->
+<div>
+  <label for="total">Se reciben:</label>
+  <input id="total" readonly/>USDs
+  <label for="">Equivalen a:</label>
+  <input type="text" readonly> Bs.
+</div>
+
+
+
+<script src="./index.js"></script>  
+</body>
+</html>
