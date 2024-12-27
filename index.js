@@ -1,5 +1,5 @@
-let tasaPEN =Number(15.85);
-let tasaUsd =Number(63.40);
+let tasaPEN =Number(16.52);
+let tasaUsd =Number(66.99);
 
 //Para recibir
 document.querySelector("#precio").addEventListener("keyup", leer);
@@ -22,7 +22,7 @@ function vaciarEnviar() {
 function calcularEnviar() {
     let cantidadEnviar = Number(document.querySelector("#precioEnviar").value);
     let bsEquivalentesEnviar = Number((cantidadEnviar*tasaPEN));
-    let totalEnviar = Number(((cantidadEnviar*tasaPEN)/(tasaUsd)).toFixed(2));
+    let totalEnviar = Number(((cantidadEnviar*tasaPEN)/tasaUsd).toFixed(2));
     document.querySelector("#totalEnviar").value=totalEnviar;
     document.querySelector("#bsEquivalentesEnviar").value=bsEquivalentesEnviar;
 }
