@@ -1,5 +1,37 @@
+let dias = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+let meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+
 let tasaPEN =Number(16.94);
 let tasaUsd =Number(69.13);
+
+//Fecha y hora en tiempo real
+let fecha = document.querySelector("#fecha");
+let hora = document.querySelector("#hora");
+
+let fechaActual= new Date();
+let dia = fechaActual.getDate();
+let diaLetras = fechaActual.getDay();
+let mes = fechaActual.getMonth();
+let anio = fechaActual.getFullYear();
+
+fecha.innerHTML=`${dias[diaLetras]} ${dia} de ${meses[mes]} del ${anio}`;
+
+//Reloj
+function actualizarHora() {
+    const ahora = new Date();
+    const horas = ahora.getHours().toString().padStart(2, '0');
+    const minutos = ahora.getMinutes().toString().padStart(2, '0');
+    const segundos = ahora.getSeconds().toString().padStart(2, '0');
+    const tiempoString = `${horas}:${minutos}:${segundos}`;
+    hora.textContent = tiempoString;
+}
+
+// Actualizar la hora cada segundo
+setInterval(actualizarHora, 1000);
+
+// Inicializar el reloj al cargar la página
+actualizarHora();
+
 
 //Para recibir
 document.querySelector("#precio").addEventListener("keyup", leer);

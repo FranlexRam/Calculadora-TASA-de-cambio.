@@ -8,11 +8,14 @@
 </head>
 <body>
   <div>
-    <h2 class="fecha"><span class="dia">Viernes</span>, <span class="fecha">27</span> de <span class="mes">diciembre</span>.</h2>
+    <h2 class="reloj">
+      <span id="fecha"></span>
+      <span id="hora"></span>
+    </h2>
     <label for="">1 PEN es igual a:</label><br>
-    <input type="number" id="tasaPen" readonly>Bs<br>
+    <input type="number" id="tasaPen" readonly class="readOnly">Bs<br>
     <label for="">1 USD es igual a:</label><br>
-    <input type="number" id="tasaUsd" readonly>Bs<br>
+    <input type="number" id="tasaUsd" readonly class="readOnly">Bs<br>
   </div>
 
   <span></span>
@@ -26,11 +29,11 @@
     <label for="precio">Para recibir:</label>
     <input id="precio" type="number" autofocus/>USDs
     <label for="">Equivalen a:</label>
-    <input type="text" id="bsEquivalentes" readonly> Bs.
+    <input type="text" id="bsEquivalentes" readonly class="readOnly"> Bs.
   </div>
   <div>
     <label for="total">Hay que enviar:</label>
-    <input id="total" readonly/>PEN (soles peruanos)
+    <input id="total" readonly class="readOnly"/>PEN (soles peruanos)
   </div>
 
 <!-- Para enviar -->
@@ -43,9 +46,9 @@
 </div>
 <div>
   <label for="totalEnviar">Se reciben:</label>
-  <input id="totalEnviar" readonly/>USDs
+  <input id="totalEnviar" readonly class="readOnly"/>USDs
   <label for="">Equivalen a:</label>
-  <input type="text" id="bsEquivalentesEnviar" readonly> Bs.
+  <input type="text" id="bsEquivalentesEnviar" readonly class="readOnly"> Bs.
 </div>
 
 
