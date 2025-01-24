@@ -46,3 +46,7 @@ appearance: none;
   color: brown;
   
 }
+
+.readOnly:hover {
+  cursor: not-allowed;
+}

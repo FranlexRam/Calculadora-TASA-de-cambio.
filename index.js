@@ -1,8 +1,8 @@
 let dias = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
 let meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 
-let tasaPEN =Number(17.00);
-let tasaUsd =Number(69.13);
+let tasaPEN =Number(16.65);//valor que Lau va a modificar diariamente
+let tasaUsd =Number(69.13);//Valor modificado por la API (dolar paralelo)
 
 //Fecha y hora en tiempo real
 let fecha = document.querySelector("#fecha");
@@ -84,15 +84,15 @@ function calcular() {
 
 // Función para obtener las tasas de cambio desde la API de ExchangeRate-API
 async function obtenerTasasDeCambio() {
-    const apiKey = '48cb3671fc81643e3c949ce5'; // clave API
-    const respuesta = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`);
+    // const apiKey = '48cb3671fc81643e3c949ce5'; // clave API
+    const respuesta = await fetch(`https://pydolarve.org/api/v1/dollar?page=enparalelovzla`);
     const data = await respuesta.json();
 
     // Actualizar las tasas en la interfaz
-    tasaUsd = data.conversion_rates.VES.toFixed(2);
+    tasaUsd = data.monitors.enparalelovzla.price;
 
-    console.log(tasaPEN);
-    console.log(tasaUsd);
+    console.log(tasaPEN);//valor que Lau va a modificar diariamente
+    console.log(tasaUsd);//Valor modificado por la API (dolar paralelo)
 
     
     document.querySelector("#tasaUsd").value = tasaUsd;
