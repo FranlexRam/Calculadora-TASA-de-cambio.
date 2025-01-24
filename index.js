@@ -82,9 +82,8 @@ function calcular() {
 
 // ... (código existente)
 
-// Función para obtener las tasas de cambio desde la API de ExchangeRate-API
+// Función para obtener las tasas de cambio desde la API de pydolarve
 async function obtenerTasasDeCambio() {
-    // const apiKey = '48cb3671fc81643e3c949ce5'; // clave API
     const respuesta = await fetch(`https://pydolarve.org/api/v1/dollar?page=enparalelovzla`);
     const data = await respuesta.json();
 
