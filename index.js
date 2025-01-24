@@ -77,3 +77,29 @@ function calcular() {
     document.querySelector("#total").value=total;
     document.querySelector("#bsEquivalentes").value=bsEquivalentes;
 }
+
+
+
+//Codigo de Gemini:
+
+// ... (tu código existente)
+
+// Función para obtener las tasas de cambio desde la API de Fixer.io
+async function obtenerTasasDeCambio() {
+    const apiKey = '7f2137ecef2f6d0b03e9410597fbe8dd'; // Reemplaza con tu clave API
+    const respuesta = await fetch(`http://data.fixer.io/api/latest?access_key=${apiKey}&symbols=PEN,VES`);
+    const data = await respuesta.json();
+
+    // Actualizar las tasas en la interfaz
+    tasaPEN = data.rates.PEN;
+    tasaUsd = data.rates.VES;
+    console.log(tasaPEN);
+    console.log(tasaUsd);
+    
+    document.querySelector("#tasaPen").value = tasaPEN;
+    document.querySelector("#tasaUsd").value = tasaUsd;
+}
+
+// Llamar a la función al cargar la página y luego cada cierto tiempo (por ejemplo, cada hora)
+obtenerTasasDeCambio();
+setInterval(obtenerTasasDeCambio, 3600000); // Cada hora
