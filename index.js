@@ -80,23 +80,21 @@ function calcular() {
 
 
 
-//Codigo de Gemini:
+// ... (código existente)
 
-// ... (tu código existente)
-
-// Función para obtener las tasas de cambio desde la API de Fixer.io
+// Función para obtener las tasas de cambio desde la API de ExchangeRate-API
 async function obtenerTasasDeCambio() {
-    const apiKey = '7f2137ecef2f6d0b03e9410597fbe8dd'; // Reemplaza con tu clave API
-    const respuesta = await fetch(`http://data.fixer.io/api/latest?access_key=${apiKey}&symbols=PEN,VES`);
+    const apiKey = '48cb3671fc81643e3c949ce5'; // clave API
+    const respuesta = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`);
     const data = await respuesta.json();
 
     // Actualizar las tasas en la interfaz
-    //tasaPEN = data.rates.PEN;
-    tasaUsd = data.rates.VES.toFixed(2);
+    tasaUsd = data.conversion_rates.VES.toFixed(2);
+
     console.log(tasaPEN);
     console.log(tasaUsd);
+
     
-    //document.querySelector("#tasaPen").value = tasaPEN;
     document.querySelector("#tasaUsd").value = tasaUsd;
 }
 
