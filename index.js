@@ -1,7 +1,7 @@
 let dias = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
 let meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 
-let tasaPEN =Number(16.94);
+let tasaPEN =Number(17.00);
 let tasaUsd =Number(69.13);
 
 //Fecha y hora en tiempo real
@@ -91,12 +91,12 @@ async function obtenerTasasDeCambio() {
     const data = await respuesta.json();
 
     // Actualizar las tasas en la interfaz
-    tasaPEN = data.rates.PEN;
-    tasaUsd = data.rates.VES;
+    //tasaPEN = data.rates.PEN;
+    tasaUsd = data.rates.VES.toFixed(2);
     console.log(tasaPEN);
     console.log(tasaUsd);
     
-    document.querySelector("#tasaPen").value = tasaPEN;
+    //document.querySelector("#tasaPen").value = tasaPEN;
     document.querySelector("#tasaUsd").value = tasaUsd;
 }
 
