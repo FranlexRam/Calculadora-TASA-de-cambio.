@@ -7,48 +7,62 @@
   <title>Calc PEN</title>
 </head>
 <body>
-  <div>
+  <!-- HORA -->
+  <div class="hora">
+    <!-- Aqui va la fecha y hora -->
+  </div>
+  <!-- TASAS DEL DIA -->
+  <div class="container">
     <h2 class="reloj">
       <span id="fecha"></span>
       <span id="hora"></span>
     </h2>
-    <label for="">1 PEN es igual a:</label><br>
-    <input type="number" id="tasaPen" readonly class="readOnly">Bs<br>
-    <label for="">1 USD es igual a:</label><br>
-    <input type="number" id="tasaUsd" readonly class="readOnly">Bs<br>
+    <div class="row">
+      <label for="">1 PEN es igual a:</label><br>
+      <input type="number" id="tasaPen" readonly class="readOnly">Bs<br>
+    </div>
+    <div class="row">
+      <label for="">1 USD es igual a:</label><br>
+      <input type="number" id="tasaUsd" readonly class="readOnly">Bs<br>
+    </div>
   </div>
 
-  <span></span>
+  
+<!-- CURRENCY DEL CAMBIO -->
+  <h2 class="tituloCambio">Cambio PEN.</h2>
 
   <!-- Para recibir -->
-  <div class="titulo">
-    <h2>Cambio PEN.</h2>
-    <h2>Para recibir:</h2>
-  </div>
-  <div>
-    <label for="precio">Para recibir:</label>
-    <input id="precio" type="number" autofocus/>USDs
-    <label for="">Equivalen a:</label>
-    <input type="text" id="bsEquivalentes" readonly class="readOnly"> Bs.
-  </div>
-  <div>
-    <label for="total">Hay que enviar:</label>
-    <input id="total" readonly class="readOnly"/>PEN (soles peruanos)
+  <div class="container">
+    <h2 class="titulo">Para recibir:</h2>
+    <div class="row">
+      <label for="precio">Para recibir:</label>
+      <input id="precio" type="number" autofocus/>USDs <br>
+    </div>
+    <div class="row">
+      <label for="bsEquivalentes">Equivalentes a:</label>
+      <input type="text" id="bsEquivalentes" readonly class="readOnly"> Bs.
+    </div>
+    <div class="row">
+      <label for="total">Hay que enviar:</label>
+      <input type="number" id="total" readonly class="readOnly"/>PEN (soles peruanos)
+    </div>
   </div>
 
 <!-- Para enviar -->
-<div class="titulo">
-  <h2>Para enviar:</h2>
-</div>
-<div>
-  <label for="precioEnviar">Si se envian:</label>
-  <input id="precioEnviar" type="number" autofocus/>PEN (soles peruanos)
-</div>
-<div>
-  <label for="totalEnviar">Se reciben:</label>
-  <input id="totalEnviar" readonly class="readOnly"/>USDs
-  <label for="">Equivalen a:</label>
-  <input type="text" id="bsEquivalentesEnviar" readonly class="readOnly"> Bs.
+<div class="container">
+  <h2 class="titulo">Para enviar:</h2>
+  <div class="row">
+    <label for="precioEnviar">Si se envian:</label>
+    <input id="precioEnviar" type="number" autofocus/>PEN (soles peruanos)
+  </div>
+  <div class="row">
+    <label for="totalEnviar">Se reciben:</label>
+    <input id="totalEnviar" readonly class="readOnly"/>USDs
+  </div>
+  <div class="row">
+    <label for="">Equivalentes a:</label>
+    <input type="text" id="bsEquivalentesEnviar" readonly class="readOnly"> Bs.
+  </div>
 </div>
 
 

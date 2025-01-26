@@ -1,35 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');*/
 
 *{
-  padding: 0;
+  padding-right: 4px;
   margin: 0;
   box-sizing: border-box;
 }
-body{
+  
+body {
+  font-family: sans-serif;
+  background-color: #f0f0f0; /* Gris tenue */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
   width: 100%;
   height: 100vh;
-  /* background: #2f0202; */
-  /* background: radial-gradient(ellipse at center,#5b720e 0%, #000000); */
-  background-size: 100%; 
-  font-family: 'Montserrat', sans-serif;
-}
-p{
-  margin: 0;
-  padding: 0;
+  background-size: 100%;
 }
 
 label{
   display:inline-block;
   width:69px;
-  font-size:0.7em;
   text-align:right;
   margin-right:3px;
 }
+
+/*p{
+  margin: 0;
+  padding: 0;
+}
+
+
+
 input, select{
   font-family: 'Montserrat', sans-serif;
   outline:none;
-  width:50px;
-  margin-bottom:3px;
+  width:60px;
+  margin-bottom: 9px;
+  padding: 4px 6px;
+  vertical-align: middle;
+  border: 1px solid #cccccc;
+}
+
+input{
+  color: #888888;
 }
 .readOnly{
   background-color: #e0e0e0;
@@ -49,4 +65,72 @@ appearance: none;
 
 .readOnly:hover {
   cursor: not-allowed;
+}
+
+input:focus {
+  outline: none; /* Eliminamos el borde por defecto */
+  /*border: 1px solid #ffbf00f5; /* Establecemos un borde de 2px sólido con el color azul neón */
+ /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Agregamos una transición suave para el color del borde y la sombra */
+/*} */
+
+.hora{
+  padding: 20px;
+}
+
+.container {
+  max-width: 60%;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.tituloCambio{
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #99f7f194;
+  padding: 2%;
+  border-radius: 16px;
+}
+
+/* 
+  border: 1px solid #cccccc;
+} */
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100px;
+}
+
+input:focus {
+  border-color: #007bff; /* Azul claro */
+  outline: none;
+}
+
+.readOnly {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
 }
