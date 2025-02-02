@@ -11,9 +11,10 @@
 }
 
 :root {
+    --bg-color-header: #ff000011;
     --bg-color: #1f242d;
     --second-bg-color: #323946;
-    --main-color: #7cf03d;
+    --main-color: #edf03d;
     --white-color: #fff;
     --disabled-color: #fff3;
 }
@@ -32,7 +33,7 @@ header {
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--bg-color);
+    background: var(--bg-color-header);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,6 +70,15 @@ section {
     height: 100%;
     padding: 10rem 9% 2rem;
     background-color: var(--bg-color);
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+}
+
+section.active {
+    visibility: visible;
+    opacity: 1;
+    overflow: auto;
 }
 
 .home {
@@ -85,6 +95,44 @@ section {
     display: inline-block;
     font-size: 3.2rem;
     margin-top: -1rem;
+}
+
+.home-detail h2 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .07rem var(--main-color);
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+    25%,
+    100% {
+        display: none;
+    }
+}
+
+.home-detail h2 span::before {
+    content: attr(data-tex);
+    position: absolute;
+    width: 0;
+    border-right: .2rem solid var(--main-color);
+    color: var(--main-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+    10%,
+    100% {
+        width: 0;
+    }
+    70%,
+    90% {
+        width: 100%;
+    }
 }
 
 .home-detail p {
@@ -149,6 +197,27 @@ section {
     overflow: hidden;
 }
 
+.home-img .img-box::before,
+.home-img .img-box::after {
+    content: '';
+    position: absolute;
+    width: 50rem;
+    height: 50rem;
+    background: conic-gradient(transparent, transparent, transparent, var(--main-color));
+    transform: rotate(0deg);
+    animation: rotate-border 10s linear infinite;
+}
+
+.home-img .img-box::after {
+    animation-delay: -5s;
+}
+
+@keyframes rotate-border {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .home-img .img-box .img-item {
     position: relative;
     width: 100%;
@@ -162,11 +231,48 @@ section {
     overflow: hidden;
 }
 
+/* Comentar para que la imagen sea circular/ovalada */
 .home-img .img-box .img-item img {
-    /* position: absolute;
+    position: absolute;
     top: 3rem;
     display: block;
     width: 85%;
     object-fit: cover;
-    mix-blend-mode: lighten; */
+    mix-blend-mode: lighten;
+}
+
+.heading {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.services-container .services-box {
+    padding: 3rem 2.5rem;
+    background: var(--second-bg-color);
+    border: .2rem solid var(--second-bg-color);
+    border-radius: 1rem;
+}
+
+.services-box .icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services-box .icon img {
+    font-size: 4.5rem;
+}
+.services-box .icon i {
+    font-size: 4.5rem;
 }
