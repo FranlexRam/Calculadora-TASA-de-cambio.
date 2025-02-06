@@ -1,7 +1,7 @@
 let dias = ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
 let meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
 
-let tasaPEN =Number(16.65);//valor que Lau va a modificar diariamente
+let tasaPEN =Number(18.235);//valor que Lau va a modificar diariamente
 let tasaUsd =Number(69.13);//Valor modificado por la API (dolar paralelo)
 
 //Fecha y hora en tiempo real
