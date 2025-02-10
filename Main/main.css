@@ -128,7 +128,7 @@ section {
 
 section.active {
     animation: show-content 1.5s linear forwards;
-    animation-delay: 1.4s;
+    animation-delay: 1.2s;
 }
 
 @keyframes show-content {
@@ -599,4 +599,49 @@ section.active {
 .contact-box .btn {
     margin-top: 2rem;
     cursor: pointer;
+}
+
+/* Break Points */
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        padding: 2rem 4%;
+    }
+    section {
+        padding: 10rem 4% 2rem;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .contact-box .field-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 4rem 0;
+    }
 }
