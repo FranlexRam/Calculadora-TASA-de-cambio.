@@ -661,6 +661,32 @@ section.active {
         height: 35rem;
     }
 
+    /* **Parte que agregue */
+    /* html {
+        font-size: 48%;
+    }
+
+    .home-detail,
+    .resume-box h2,
+    .resume-box .heading,
+    .resume-box .desc,
+    .resume-detail.about .resume-item {
+        text-align: center;
+    }
+
+    .home-detail h1 {
+        font-size: clamp(3.5rem, 9vw, 5.5rem);
+    }
+
+    .home-detail .btn-sci {
+        flex-direction: column-reverse;
+    }
+
+    .home-detail .btn-sci .sci {
+        margin-left: 0;
+        margin-bottom: 2rem;
+    } */
+
     .resume-container,
     .portfolio-container,
     .contact-container {
@@ -685,4 +711,92 @@ section.active {
         width: 30rem;
         height: 30rem;
     }
+
+    html {
+        font-size: 48%;
+    }
+
+    .home-detail,
+    .resume-box h2,
+    .resume-box .heading,
+    .resume-box .desc,
+    .resume-detail.about .resume-item {
+        text-align: center;
+    }
+
+    .home-detail h1 {
+        font-size: clamp(3.5rem, 8vw, 5.5rem);
+    }
+
+    .home-detail .btn-sci {
+        flex-direction: column-reverse;
+    }
+
+    .home-detail .btn-sci .sci {
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
 }
+
+.contact-box .field-box {
+    grid-template-columns: 1fr;
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 45%;
+    }
+
+    .home-detail,
+    .resume-box h2,
+    .resume-box .heading,
+    .resume-box .desc,
+    .resume-detail.about .resume-item {
+        text-align: center;
+    }
+
+    .home-detail h1 {
+        font-size: clamp(3.5rem, 8vw, 5.5rem);
+    }
+
+    .home-detail .btn-sci {
+        flex-direction: column-reverse;
+    }
+
+    .home-detail .btn-sci .sci {
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .home-detail,
+    .resume-box h2,
+    .resume-box .heading,
+    .resume-box .desc,
+    .resume-detail.about .resume-item {
+        text-align: center;
+    }
+
+    .home-detail h1 {
+        font-size: clamp(3.5rem, 6vw, 5.5rem);
+    }
+
+    .home-detail .btn-sci {
+        flex-direction: column-reverse;
+    }
+
+    .home-detail .btn-sci .sci {
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .contact-box form {
+        padding: 2.5rem 3rem 3.5rem;
+    }
+
+    .contact-box h2 {
+        font-size: 3.5rem;
+    }
+}
+
