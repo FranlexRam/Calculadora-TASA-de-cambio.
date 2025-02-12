@@ -685,4 +685,12 @@ section.active {
         width: 30rem;
         height: 30rem;
     }
+
+    .contact-box .field-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* 1:56:36 */
 }
